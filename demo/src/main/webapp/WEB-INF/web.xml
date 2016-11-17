@@ -35,6 +35,20 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     
+    <!-- 过滤器设置UTF-8编码，新特性：HTTP 消息转换编码一致处理，包括默认 UTF-8 用于多部分文本内容，故不许配置 -->
+    <!-- <filter>
+        <filter-name>encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encoding</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping> -->
+    
     <!-- 应用mvc-dispatcher时如果配置<url-pattern>/</url-pattern>,会导致页面引用的JS、CSS找不到  -->
     <!-- 方法一：使用spring mvc 的 resources 注解 用来处理静态文件 -->
     <!-- 方法二：在web.xml中添加如下代码(推荐) -->
