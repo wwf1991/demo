@@ -58,4 +58,12 @@
         <property name="defaultEncoding" value="UTF-8" />
         <property name="resolveLazily" value="true" />
     </bean>
+    
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/viewAll.form"/>
+            <bean class="com.cn.demo.interceptor.TestInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

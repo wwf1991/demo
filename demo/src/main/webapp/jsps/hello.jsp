@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-这是hello.jsp
+这是hello.jsp<br>
+${arg }
 </body>
 </html>
